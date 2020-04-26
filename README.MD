@@ -1,0 +1,1 @@
+Learning basic server with Apollo GraphQL
