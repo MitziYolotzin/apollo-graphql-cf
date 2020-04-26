@@ -1,1 +1,1 @@
-Learning Apollo GraphQL
+Learning basic server with Apollo GraphQL
