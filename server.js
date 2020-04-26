@@ -19,7 +19,19 @@ const typeDefs = `
 
 const schema = makeExecutableSchema({
     typeDefs: typeDefs,
-    resolvers: {}
+    resolvers: {
+        Query: {
+            getCourses(obj, { page, limit }) {
+                if (page !== undefined) {
+                    return courses.slice(page * limit, (page + 1) * limit);
+                    //init in 0
+                    //return courses.slice((page-1) * limit, (page) * limit);
+                }
+                return courses;
+
+            }
+        }
+    }
 
 })
 
